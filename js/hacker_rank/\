@@ -1,0 +1,14 @@
+function timeConversion(time) {
+    // 12:00:00AM
+    // 12:00:00PM
+    
+    if (time.includes("PM")) {
+        const [hours, minutes, secondsWithPeriod] = time.split(":");
+        const seconds = String(secondsWithPeriod).replace(/[a-z][A-Z]/, "");
+        const numberHours = Number(hours);
+        const militaryHours = numberHours < 12 ? numberHours + 12 : 0;
+        return `${militaryHours.toString().padStart(2, "0")}:${minutes}:${seconds}`
+    }
+}
+
+timeConversion("12:00:00AM");
