@@ -1,15 +1,13 @@
 function lonelyinteger(a) {
-    let value = null;
-    let visited = new Set();
+    let already = new Set();
+    let value = a.pop();
 
-    for (let i = 0; i < a.length; i++) {
-        value = a[i];
-
-        if (!visited.has(value) && a.filter(v => v === value).length === 1) {
+    while (value) {
+        if (!already.has(value) && !a.some(v => v === value)) {
             break;
         }
-
-        visited.add(value);
+        already.add(value);
+        value = a.pop();
     }
 
     return value;
