@@ -1,12 +1,12 @@
 function lonelyinteger(a) {
-    let already = new Set();
+    let visited = new Set();
     let value = a.pop();
 
     while (value) {
-        if (!already.has(value) && !a.some(v => v === value)) {
+        if (!visited.has(value) && !a.some(v => v === value)) {
             break;
         }
-        already.add(value);
+        visited.add(value);
         value = a.pop();
     }
 
