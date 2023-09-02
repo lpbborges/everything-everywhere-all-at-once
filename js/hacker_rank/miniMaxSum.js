@@ -1,4 +1,4 @@
-function miniMaxSum(arr) {
+export function miniMaxSum(arr) {
     // Write your code here
     const sortedArr = arr.sort();
 
@@ -13,4 +13,6 @@ function miniMaxSum(arr) {
     );
 
     console.log(`${min} ${max}`);
+
+    return [min, max];
 }

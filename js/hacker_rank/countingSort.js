@@ -1,4 +1,4 @@
-function countingSort(arr) {
+export function countingSort(arr) {
     const countingArr = Array.from({ length: 100 }).fill(0);
 
     for (let i = 0; i < arr.length; i++) {

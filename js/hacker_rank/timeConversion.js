@@ -1,4 +1,4 @@
-function timeConversion(s) {
+export function timeConversion(s) {
     let [hours, minutes, seconds] = s.split(":");
     hours = Number(hours);
      
