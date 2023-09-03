@@ -1,4 +1,4 @@
-function diagonalDifference(arr) {
+export function diagonalDifference(arr) {
     let leftToRighDiagonal = 0;
     let rightToLeftDiagonal = 0;
     const lastIndex = arr.length - 1;

@@ -1,4 +1,4 @@
-function flippingBits(n) {
+export function flippingBits(n) {
     let bin = '';
 
     while (n >= 1) {
@@ -14,5 +14,4 @@ function flippingBits(n) {
     }
 
     return parseInt(flipped, 2);
-    
 }
